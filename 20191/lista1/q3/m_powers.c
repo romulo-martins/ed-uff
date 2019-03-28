@@ -8,7 +8,7 @@ int n_is_valid(int n) {
 
 int read_n(){
 	int n;
-	printf("Informe um número N (n > 1): \n");
+	printf("Informe um número N ( > 1): \n");
 	scanf("%d", &n);
 	return n;
 }
@@ -55,6 +55,6 @@ int main(void) {
 		show_m_powers(n, m);
 	} while (1);
 
-	printf("\nFim do programa!\n");
+	printf("\n### Fim do programa! ###\n");
 	return 0;
 }

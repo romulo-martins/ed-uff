@@ -1,13 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//----- Interface -----
-
-void show_n_primes(int n);
-int is_prime(int n);
-
-//----- Funções -----
-
 // Verifica se um determinado numero n é primo.
 // Ou seja, ao encontrar qualquer divisor que não seja 1 ou n então é primo.
 int is_prime(int n) {
@@ -37,15 +30,15 @@ void show_n_primes(int n) {
 }
 
 // ----- Main -----
-
 int main (void) {
 
   int n;
   do {
     printf("Informe um numero positivo N (negativo para sair): ");
     scanf("%d",&n);
-    if(n > 0) show_n_primes(n);
-  } while (n > 0);
+    if(n < 0) break; 
+    show_n_primes(n);
+  } while (1);
 
   printf("Fim do programa!\n");
 
