@@ -1,6 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*
+  Q2) Implemente um programa que, infinitamente, receba, como parâmetro de entrada, um número
+  n e retorne os n primeiros números primos existentes. Seu programa para quando n for menor ou
+  igual a zero.
+*/
+
 // Verifica se um determinado numero n é primo.
 // Ou seja, ao encontrar qualquer divisor que não seja 1 ou n então é primo.
 int is_prime(int n) {
