@@ -35,8 +35,7 @@ void show_n_primes(int n) {
   printf("\n");
 }
 
-// ----- Main -----
-int main (void) {
+int main () {
 
   int n;
   do {

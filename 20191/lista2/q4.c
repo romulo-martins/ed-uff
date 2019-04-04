@@ -11,9 +11,10 @@
 	número for negativo.
 */
 
+// Inverte o número N passado como parametro e verifica se sua inversão é igual a N.
 int is_palindrome(int n) {
 	int count = 0, inverted = 0, temp = n;
-	while(temp /= 10) count++;
+	while(temp /= 10) count++; // conta quantos algarismos o número N tem.
 
 	temp = n;
 	for(int i = count; temp > 0; i--) {

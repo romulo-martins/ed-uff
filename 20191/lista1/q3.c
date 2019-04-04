@@ -48,7 +48,7 @@ void show_welcome() {
 	printf("\n");
 }
 
-int main(void) {
+int main() {
 	show_welcome();
 
 	int n, m;
