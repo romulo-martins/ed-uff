@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /*
-  Q2) Implemente um programa que, infinitamente, receba, como parâmetro de entrada, um número
-  n e retorne os n primeiros números primos existentes. Seu programa para quando n for menor ou
-  igual a zero.
+Q2) Implemente um programa que, infinitamente, receba, como parâmetro de entrada, um número
+n e retorne os n primeiros números primos existentes. Seu programa para quando n for menor ou
+igual a zero.
 */
 
 // Verifica se um determinado numero n é primo.
@@ -45,7 +45,6 @@ int main () {
     show_n_primes(n);
   } while (1);
 
-  printf("Fim do programa!\n");
-
+  printf("\n");
   return 0;
 }

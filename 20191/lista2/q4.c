@@ -38,6 +38,6 @@ int main() {
 		}
 	} while (1);
 
-	printf("Fim do Programa.\n");
+	printf("\n");
 	return 0;
 }

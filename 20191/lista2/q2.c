@@ -21,7 +21,6 @@ int main() {
 		// TODO: chame os outros métodos por aqui.
 	} while (1);
 
-	printf("Fim do Programa!\n");
-
+	printf("\n");
 	return 0;
 }

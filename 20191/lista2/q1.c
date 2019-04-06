@@ -22,8 +22,10 @@ int* new_array(int n) {
 // Marca os multiplos de um número primo, números não marcados são primos.
 int* mark_multiples(int* array, int n) {
 	for (int i = 2; i < n / 2; i++)	{
-		for(int j = 2; i * j < n ; j++) {
-			array[i * j] = 1;			
+		if (!array[i]) {
+			for(int j = 2; i * j < n ; j++) {
+				array[i * j] = 1;			
+			}
 		}
 	}
 	return array;
@@ -48,5 +50,6 @@ int main() {
 
 	free(array);
 
+	printf("\n");	
 	return 0;
 }

@@ -1,12 +1,10 @@
 Q6) Supondo as seguintes declarações:
 
-`` 
 int x, y, z;
 int teste;
 x = 5;
 y = x++;
 z = x--;
-``
 
 Informe os valores de teste , x , y e z depois da avaliação das seguintes expressões:
 (a) teste = !y == !x;
