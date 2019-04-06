@@ -3,12 +3,12 @@
 #include <math.h>
 
 /*
-	Q4) Implemente um programa que, infinitamente, teste se um número é um palíndromo (Dica: se
-	uma palavra pode ser lida, indiferentemente, da esquerda para a direita e vice-versa, ela é
-	considerada um palíndromo). Você deve passar o número a ser testado. O seu programa deverá
-	imprimir as seguintes mensagens “VERDADEIRO” (caso o número seja um palíndromo) ou
-	“FALSO” (caso o número não seja um palíndromo) na console. Seu programa para quando o
-	número for negativo.
+Q4) Implemente um programa que, infinitamente, teste se um número é um palíndromo (Dica: se
+uma palavra pode ser lida, indiferentemente, da esquerda para a direita e vice-versa, ela é
+considerada um palíndromo). Você deve passar o número a ser testado. O seu programa deverá
+imprimir as seguintes mensagens “VERDADEIRO” (caso o número seja um palíndromo) ou
+“FALSO” (caso o número não seja um palíndromo) na console. Seu programa para quando o
+número for negativo.
 */
 
 // Inverte o número N passado como parametro e verifica se sua inversão é igual a N.

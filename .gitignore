@@ -1,1 +1,2 @@
+# Ignora os arquivos binários gerados na compilação
 *.o
