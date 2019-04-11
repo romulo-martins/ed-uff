@@ -55,7 +55,6 @@ int is_row_valid(int** mat, int n, int row) {
 	for (int j = 0; j < n; j++) {
 		counter[mat[row][j]] += 1;
 	}
-
 	for (int i = 1; i < 10; i++) {
 		if (counter[i] > 1) return 0;
 	}
@@ -79,7 +78,6 @@ int is_col_valid(int** mat, int n, int col) {
 	for (int i = 0; i < n; i++) {
 		counter[mat[i][col]] += 1;
 	}
-
 	for (int i = 1; i < 10; i++) {
 		if (counter[i] > 1) return 0;
 	}
@@ -97,10 +95,31 @@ int verify_cols(int** mat, int n) {
 	return 1;
 }
 
-// Verifica os quadrantes
+// Verifica se um determinado quadrante é valido
+int is_quadrant_valid(int** mat, int n, int row1, int row2, int cols1, int cols2) {
+	int counter[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+	for (int i = row1; i < row2; i++) {
+		for (int j = cols1; j < cols2; j++) {
+			counter[mat[i][j]] += 1;
+		}
+	}
+	for (int i = 1; i < 10; i++) {
+		if (counter[i] > 1) return 0;
+	}
+	return 1;
+}
+
+// Verifica todos quadrantes se são válidos
 int verify_quadrant(int** mat, int n) {
-	// TODO: Implementar
-	return 0;
+	for (int i = 3; i <= n; i += 3) {
+		for (int j = 3; j <= n; j += 3) {
+			if(!is_quadrant_valid(mat, n, i-3, i, j-3, j)) {
+				printf("O quadrante (%d, %d) (%d, %d) não é válido.\n", i-3, i, j-3, j);
+				return 0;
+			}
+		}
+	}
+	return 1;
 }
 
 // Verifica se uma matriz 9 x 9 é um Sudoku.
