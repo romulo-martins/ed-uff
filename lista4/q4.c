@@ -59,6 +59,7 @@ int is_pow_2(int n) {
 	return 1;
 }
 
+// Preenche um determinado quadrante da matriz. 
 void fill_had_mat(int** mat, int n) {
 	if(n == 1) {
 		mat[0][0] = 1;

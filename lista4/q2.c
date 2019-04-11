@@ -9,13 +9,13 @@ matriz. Escreva uma função que realize a multiplicação destas duas matrizes 
 primeira e nem a segunda matriz: int** mult (int m1, int n1, int **mat1, int m2, int n2, int **mat2)
 */
 
-// Libera uma matriz de foi alocada dinamicamente
+// Libera uma matriz de foi alocada dinamicamente.
 void free_matrix(int** mat, int rows) {
 	for (int i = 0; i < rows; i++) free(mat[i]);
 	free(mat);
 }
 
-// Cria uma matriz de inteiros alocada dinamicamente
+// Cria uma matriz de inteiros alocada dinamicamente.
 int** new_matrix(int rows, int  columns) {
 	int** matrix = (int**) malloc(sizeof(int*) * rows);
 	for (int i = 0; i < rows; i++) {
@@ -24,7 +24,7 @@ int** new_matrix(int rows, int  columns) {
 	return matrix;
 }
 
-// Le do teclado os elementos de uma matriz de inteiros
+// Le do teclado os elementos de uma matriz de inteiros.
 int** read_matrix(int** mat, int rows, int columns) {
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < columns; j++) {
@@ -34,7 +34,7 @@ int** read_matrix(int** mat, int rows, int columns) {
 	return mat;
 }
 
-// Exibe no console uma matriz 
+// Exibe no console uma matriz.
 void show_matrix(int** mat, int rows, int columns) {
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < columns; j++) {
@@ -45,7 +45,7 @@ void show_matrix(int** mat, int rows, int columns) {
 	printf("\n");
 }
 
-// Função que realiza a multiplização de  matrizes
+// Função que realiza a multiplização de  matrizes.
 int** multi(int m1, int n1, int** mat1, int m2, int n2, int** mat2) {
 	if(n1 != m2) exit(1);
 

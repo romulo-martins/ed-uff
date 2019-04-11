@@ -13,6 +13,7 @@ int* new_array(int n) {
 	return array;
 }
 
+// Conta quantos digitos de um determinado número tem. 
 int* counter_digits(int n) {
 	int* counter = new_array(10);
 	int digit;
@@ -25,6 +26,7 @@ int* counter_digits(int n) {
 	return counter;
 }
 
+// Verifica se A e B possui os mesmos digitos.
 int have_same_digits(int* a_digits, int* b_digits) {
 	for (int i = 0; i < 10; i++) {
 		if (a_digits[i] != b_digits[i]) return 0;
@@ -32,6 +34,7 @@ int have_same_digits(int* a_digits, int* b_digits) {
 	return 1;
 }
 
+// Verifica se o número B é uma permutação de A.
 int is_permutation(int a, int b) {
 	int* a_digits_count = counter_digits(a);
 	int* b_digits_count = counter_digits(b);
