@@ -45,7 +45,7 @@ void show_matrix(int** mat, int rows, int columns) {
 	printf("\n");
 }
 
-// Matriz que realiza a multiplização de  matrizes
+// Função que realiza a multiplização de  matrizes
 int** multi(int m1, int n1, int** mat1, int m2, int n2, int** mat2) {
 	if(n1 != m2) exit(1);
 
