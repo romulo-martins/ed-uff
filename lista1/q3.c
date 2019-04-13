@@ -34,8 +34,7 @@ int read_m() {
 void show_m_powers(int n, int m) {
 	printf("As potencias de %d menores que %d são: \n", m, n);
 
-	int i;
-	for(i = 1; (int)pow(m, i) < n; i++) {
+	for(int i = 1; (int)pow(m, i) < n; i++) {
 		printf(" %d ", (int)pow(m, i));
 	}
 	printf("\n");

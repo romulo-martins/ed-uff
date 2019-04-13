@@ -10,9 +10,9 @@ programa deve ser “1100”. Seu programa para quando n for menor que zero.
 
 // Converte um número de inteiro para binário
 int convert_to_binary(int n) {
-	int i, rest, binary = 0;
+	int rest, binary = 0;
 
-	for(i = 0; n > 0; i++) {
+	for(int i = 0; n > 0; i++) {
 		rest = n % 2;
 		binary += rest * pow(10, i);
 		n = n / 2;
