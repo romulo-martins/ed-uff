@@ -14,6 +14,7 @@ typedef struct list {
 List* new_list();
 List* insert_init(List* l, int info);
 List* insert_end(List* l, int info);
+List* insert_sorted(List* l, int info);
 List* search_list(List* l, int info);
 List* remove_list(List* l, int info);
 void print_list(List* l);
@@ -23,11 +24,13 @@ void free_list(List* l);
 	=== Implementação ===
 */
 
+// Inicializa uma nova lista.
 List* new_list() {
 	return NULL;
 }
 
 
+// Insere o novo elemento no inicio da lista.
 List* insert_init(List* l, int info) {
 	List* node = (List*) malloc(sizeof(List));
 	node->info = info;
@@ -36,6 +39,7 @@ List* insert_init(List* l, int info) {
 }
 
 
+// Inserre o novo elemento no fim da lista.
 List* insert_end(List* l, int info) {
 	if(!l) return insert_init(l, info);
 
@@ -50,17 +54,34 @@ List* insert_end(List* l, int info) {
 	return l;
 }
 
+// Insere o elemento de forma ordenada.
+List* insert_sorted(List* l, int info) {
+	List *p = l, *prev = NULL;
+	while ((p) && (p->info < info)) {
+		prev = p;
+		p = p->next;
+	}
 
+	if (!prev) return insert_init(l, info);
+
+	List* node = (List*) malloc(sizeof(List));
+	node->info = info;
+	node->next = p;
+	prev->next = node;
+
+	return l;
+}
+
+// Busca um elemento na lista, retorna o nó de onde está o elemento, caso não encontre retorna NULL.
 List* search_list(List* l, int info) {
 	List* p = l;
 	while((p) && (p->info != info)) p = p->next;
 	return p;
 }
 
-
+// Remove o elemento da lista.
 List* remove_list(List* l, int info) {
-	List* prev = NULL;
-	List* p = l;
+	List *p = l, *prev = NULL;
 	while((p) && (p->info != info)) {
 		prev = p;
 		p = p->next;
@@ -80,6 +101,7 @@ List* remove_list(List* l, int info) {
 	return l;	
 }
 
+// Exibe a lista no terminal.
 void print_list(List* l) {
 	List* p = l; 
 	while(p) {
@@ -88,7 +110,7 @@ void print_list(List* l) {
 	}
 }
 
-
+// Libera a lista da memória principal.
 void free_list(List* l) {
 	List* p = l;
 	while(p) {

@@ -4,21 +4,20 @@
 
 int main() {
 	List* l = new_list();
+
+	printf("----- Insere no inicio -----\n");
 	l = insert_init(l, 2);
 	l = insert_init(l, 3);
 	l = insert_init(l, 5);
-
-	printf("----- Insere no inicio -----\n");
 	print_list(l);
 
+	printf("----- Insere no fim -----\n");
 	l = insert_end(l, 7);
 	l = insert_end(l, 11);
 	l = insert_end(l, 13);
-
-	printf("----- Insere no fim -----\n");
 	print_list(l);
 	
-	printf("----- Remove (5, 7) -----\n");
+	printf("----- Remove (5, 7, 13) -----\n");
 	l = remove_list(l, 5);
 	l = remove_list(l, 7);
 	l = remove_list(l, 13);
