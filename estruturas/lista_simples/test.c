@@ -2,14 +2,6 @@
 #include <stdlib.h>
 #include "simple_list.h"
 
-void print_node(List* node) {
-	if(node) {
-		printf("%d\n", node->info);
-	} else {
-		printf("O elemento não se encontra na lista.\n");
-	}
-}
-
 int main() {
 	List* l = new_list();
 	l = insert_init(l, 2);
@@ -25,17 +17,11 @@ int main() {
 
 	printf("----- Insere no fim -----\n");
 	print_list(l);
-
-	// printf("----- Buscas ----\n");
-	// List* t = search_list(l, 5);
-	// print_node(t);
-	
-	// t = search_list(l, 19);
-	// print_node(t);
 	
 	printf("----- Remove (5, 7) -----\n");
 	l = remove_list(l, 5);
 	l = remove_list(l, 7);
+	l = remove_list(l, 13);
 	print_list(l);
 
 	free_list(l);	
