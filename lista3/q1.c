@@ -49,6 +49,8 @@ char next_char(char c, int n) {
 	return resp;
 }
 
+
+// Exemplo: "Amor" -> “zLNQ”
 void shift_troca_string (char *str) {
 	for (int i = 0; str[i] != '\0'; i++) {
 		char resp;
