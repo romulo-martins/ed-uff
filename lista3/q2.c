@@ -19,7 +19,7 @@ int is_lower_vogal(char c) {
 	return 0;
 }
 
-char* codifica (char* str) {
+char* codifica(char* str) {
 	int str_lenght = strlen(str);
 	char* cod_str = (char*) malloc(sizeof(char) * str_lenght); 
 
