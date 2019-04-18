@@ -33,7 +33,7 @@ int** read_matrix(int** mat, int rows, int columns) {
 	return mat;
 }
 
-// Exibe no console uma matriz, customizado para um Sudoku
+// Exibe no console uma matriz, customizado para um Sudoku.
 void show_matrix(int** mat, int rows, int columns) {
 	for (int i = 0; i < rows; i++) {
 		if (i > 0 && i % 3 == 0) {
@@ -72,7 +72,7 @@ int verify_rows(int** mat, int n) {
 	return 1;
 }
 
-// Verifica se uma determinada linha passada por parametro é válida
+// Verifica se uma determinada coluna passada por parametro é válida.
 int is_col_valid(int** mat, int n, int col) {
 	int counter[10] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	for (int i = 0; i < n; i++) {
@@ -109,7 +109,7 @@ int is_quadrant_valid(int** mat, int n, int row1, int row2, int cols1, int cols2
 	return 1;
 }
 
-// Verifica todos quadrantes se são válidos
+// Verifica se todos quadrantes são válidos.
 int verify_quadrant(int** mat, int n) {
 	for (int i = 3; i <= n; i += 3) {
 		for (int j = 3; j <= n; j += 3) {

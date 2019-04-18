@@ -12,7 +12,7 @@ na tela. Este programa para somente quando o grau g do polinômio for menor ou i
 */
 
 // Cria um array, alocado dinâmicamente.
-int * new_array(int n) {
+int* new_array(int n) {
 	int* array = (int*)malloc(sizeof(int) * n);
 	return array;
 }

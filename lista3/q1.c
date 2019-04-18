@@ -10,16 +10,20 @@ shift_troca_string (char *str). A letra ‘a’ deve ser substituída por ‘Z�
 forem letras devem ser substituídos por ‘!’. Sabe-se que A = 65, Z = 90, a = 97 e z = 122.
 */
 
-int is_alphabet(char c) {
-	return (c >= 65) && (c <= 90) || (c >= 97 && c <= 122);
-}
 
+// Segundo a tabela ASCII o intervalo de letras maiusculas fica entre 65 e 90.
 int is_upper_letter(char c) {
 	return (c >= 65) && (c <= 90);
 }
 
+// Segundo a tabela ASCII o intervalo de letras minusculas fica entre 97 e 122.
 int is_lower_letter(char c) {
 	return (c >= 97) && (c <= 122);
+}
+
+// Verifica se é uma letra do alfabeto.
+int is_alphabet(char c) {
+	return is_upper_letter(c) || is_lower_letter(c);
 }
 
 char conv_lower(char c) {
@@ -34,6 +38,7 @@ char conv_upper(char c) {
 	return c - 32;
 }
 
+// Pega o proximo caractere seguindo a distancia N.
 char next_char(char c, int n) {
 	if(!is_alphabet(c)) return -1;
 	char resp = c + n;

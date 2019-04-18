@@ -28,7 +28,7 @@ int main() {
 		printf("Informe um número inteiro N (< 0 para sair): \n");
 		scanf("%d", &n);
 		if (n < 0) break;
-		printf("O número %d em binário é: %d\n\n", n, convert_to_binary(n));
+		printf("O número %d em binário é: %d\n", n, convert_to_binary(n));
 	} while (1);
 
 	printf("\n");
