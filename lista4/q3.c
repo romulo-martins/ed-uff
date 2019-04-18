@@ -16,6 +16,7 @@ dinamicamente.
 
 # define STRING_SIZE 51
 
+// Retorna um array de tamanho 'n' de strings.
 char** new_str_array(int n) {
 	char** str_array = (char**) malloc(sizeof(char*) * n);
 	for (int i = 0; i < n; i++) {
@@ -24,6 +25,7 @@ char** new_str_array(int n) {
 	return str_array;
 }
 
+// Rentorna o numero de caracteres 'c' que uma string possui.
 int char_counter(char* str, char c) {
 	int count = 0;
 	for (int i = 0; str[i] != '\0'; i++) {
@@ -32,6 +34,7 @@ int char_counter(char* str, char c) {
 	return count;
 }
 
+// Pega a substring de acordo com o intervalo passado por parametro.
 char* get_sub_str(char* str, int start_idx, int end_idx) {
 	char* str_temp = (char*) malloc(sizeof(char) * STRING_SIZE); 
 	int k = 0;
