@@ -26,13 +26,15 @@ int is_alphabet(char c) {
 	return is_upper_letter(c) || is_lower_letter(c);
 }
 
-char conv_lower(char c) {
+// Converte um caractere minusculo para maiusculo.
+char convert_to_lower(char c) {
 	if (!is_alphabet(c)) return -1;
 	if (is_lower_letter(c)) return c;
 	return c + 32;
 }
 
-char conv_upper(char c) {
+// Converte um caractere minusculo para maiusculo.
+char convert_to_upper(char c) {
 	if (!is_alphabet(c)) return -1;
 	if (is_upper_letter(c)) return c;
 	return c - 32;
@@ -52,14 +54,14 @@ char next_char(char c, int n) {
 
 // Exemplo: "Amor" -> “zLNQ”
 void shift_troca_string (char *str) {
+	char resp;
 	for (int i = 0; str[i] != '\0'; i++) {
-		char resp;
 		if(!is_alphabet(str[i])) {
 			str[i] = '!';
 		} else if (is_upper_letter(str[i])) {
-			resp = conv_lower(str[i]);
+			resp = convert_to_lower(str[i]);
 		} else {
-			resp = conv_upper(str[i]);
+			resp = convert_to_upper(str[i]);
 		}
 		str[i] = next_char(resp, -1);
 	}
