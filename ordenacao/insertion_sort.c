@@ -26,8 +26,8 @@ void insertion_sort(int v[], int n) {
 }
 
 int main() {
-	int v[] = { 5, 2, 4, 6, 1, 3 };
-	int n = 6;
+	int v[] = { 5, 2, 4, 6, 1, 3, 9, 7, 8 };
+	int n = sizeof(v) / sizeof(int);
 	
 	print_vector(v, n);
 	insertion_sort(v, n);
