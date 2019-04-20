@@ -22,7 +22,9 @@ int main(int argc, char const *argv[]) {
 	l = insere_ini(l, 7);
 	l = insere_ini(l, 11);
 	l = insere_ini(l, 13);
-	
+	l = insere_ini(l, 17);
+	l = insere_ini(l, 19);
+
 	// antes de iverter
 	imprime(l);
 
@@ -37,17 +39,29 @@ int main(int argc, char const *argv[]) {
 	return 0;
 }
 
+void troca_info(TLSE* a, TLSE* b) {
+	int temp = a->info;
+	a->info = b->info;
+	b->info = temp;
+}
+
 // Função que inverte uma lista simplesmente encadeada.
-// OBS: o primeiro elemento não inverte. WTF?
 void inverte(TLSE* l) {
 	if(!l) return;
 
-	TLSE *p = l->prox, *ant = NULL, *atual = NULL;
-	while(p) {
-		ant = atual;
-		atual = p;
-		p = p->prox;
-		atual->prox = ant;
+	TLSE *ant = NULL, *ult = l;
+	while(ult->prox) {
+		ant = ult;
+		ult = ult->prox;
 	}
-	l->prox = atual; 
+
+	TLSE *p = l;
+	while(p != ult) {
+		troca_info(p, ult);
+		ult = ant;
+		if (p == ult) break;
+		ant = p;
+		while(ant->prox != ult) ant = ant->prox;
+		p = p->prox;
+	}
 }
