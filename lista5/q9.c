@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "tlse.h"
+#include "lib/tlse.h"
 
 /*
 Q9) Considerando a definição de lista de Q1, escreva uma função em C que, dadas duas

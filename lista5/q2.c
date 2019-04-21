@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "tlse.h"
+#include "lib/tlse.h"
 
 /*
 Q2) Refaça a Q1, escrevendo uma função em C que, dada uma lista l qualquer, inverta os

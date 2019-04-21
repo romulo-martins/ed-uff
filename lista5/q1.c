@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "tlse.h"
+#include "lib/tlse.h"
 
 /*
 Q1) Considerando as seguintes declarações de lista encadeada:
