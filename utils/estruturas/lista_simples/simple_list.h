@@ -17,6 +17,7 @@ List* insert_end(List* l, int info);
 List* insert_sorted(List* l, int info);
 List* search_list(List* l, int info);
 List* remove_list(List* l, int info);
+int list_size(List* l);
 void print_list(List* l);
 void free_list(List* l);
 
@@ -101,13 +102,25 @@ List* remove_list(List* l, int info) {
 	return l;	
 }
 
+// Informa a quantidade de elementos que a lista possui, ou seja, o tamanho da lista.
+int list_size(List* l) {
+	int count = 0;
+	List* p = l;
+	while(p) {
+		count++;
+		p = p->next;
+	}
+	return count;
+}
+
 // Exibe a lista no terminal.
 void print_list(List* l) {
 	List* p = l; 
 	while(p) {
-		printf("%d\n", p->info);
+		printf(" %d ", p->info);
 		p = p->next;
 	}
+	printf("\n");
 }
 
 // Libera a lista da memória principal.
