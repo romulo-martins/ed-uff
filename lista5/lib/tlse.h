@@ -7,6 +7,7 @@ typedef struct lista {
 // Interface da lista.
 TLSE* inicializa();
 TLSE* insere_ini(TLSE* l, int info);
+TLSE* insere_fim(TLSE* l, int info);
 TLSE* busca(TLSE* l, int info);
 TLSE* remover(TLSE* l, int info);
 void libera(TLSE* l);
@@ -23,6 +24,21 @@ TLSE* insere_ini(TLSE* l, int info) {
 	novo->info = info;
 	novo->prox = l;
 	return novo;
+}
+
+// Insere no fim da lista.
+TLSE* insere_fim(TLSE* l, int info) {
+	if(!l) return insere_ini(l, info);
+
+	TLSE *p = l;
+	while(p->prox) p = p->prox;
+
+	TLSE *novo = (TLSE*) malloc(sizeof(TLSE));
+	novo->info = info;
+	novo->prox = NULL;
+
+	p->prox = novo;
+	return l;
 }
 
 // Retonar o nó onde se encontra o elemento, caso não encontre retorna NULL.
