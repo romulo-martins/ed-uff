@@ -11,8 +11,6 @@ TAluno* insere_ini(TAluno* a, int mat, float cr);
 void libera(TAluno* a);
 void imprime(TAluno* a);
 
-// Implementações
-
 // Inicializa a lista.
 TAluno* inicializa() {
 	return NULL;
