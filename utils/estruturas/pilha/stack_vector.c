@@ -10,11 +10,10 @@ typedef struct stack {
 int STACK_SIZE = 100;
 
 Stack * new_stack (void) {
-	Stack *new_stack = (Stack*) malloc(sizeof(Stack));
-	new_stack->pos = 0;
-	new_stack->vet = (int*) malloc(sizeof(int) * STACK_SIZE);
-
-	return new_stack;
+	Stack *stack = (Stack*) malloc(sizeof(Stack));
+	stack->pos = 0;
+	stack->vet = (int*) malloc(sizeof(int) * STACK_SIZE);
+	return stack;
 }
 
 void push (Stack *st, int value) {
