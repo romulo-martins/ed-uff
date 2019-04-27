@@ -15,6 +15,5 @@ gcc test.c -o test -lm
 gcc -o my_app test.c simple_list.c
 ```
 
-
 ## Referencias:
 * http://www.ic.uff.br/~rosseti/EDA_PG/2019-1/index.html 
