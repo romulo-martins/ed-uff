@@ -65,8 +65,12 @@ int size (Queue *q) {
 
 void free_queue (Queue *q) {
 	if(!q) exit(1);
-	free(q->first);
-	free(q->last);
+	Node *node = q->first;
+	while(node) {
+		Node *temp = node;
+		node = node->next;
+		free(temp);
+	}
 	free(q);
 }
 

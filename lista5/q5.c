@@ -12,15 +12,13 @@ TLSE* rto (TLSE* l, int elem);
 
 int main(int argc, char const *argv[]) {
 	TLSE* l = inicializa();
-	l = insere_ini(l, 2);
-	l = insere_ini(l, 3);
-	l = insere_ini(l, 5);
-	l = insere_ini(l, 2);
-	l = insere_ini(l, 7);
-	l = insere_ini(l, 11);
-	l = insere_ini(l, 2);
-	l = insere_ini(l, 13);
-	l = insere_ini(l, 17);
+	l = insere_fim(l, 2);
+	l = insere_fim(l, 3);
+	l = insere_fim(l, 5);
+	l = insere_fim(l, 2);
+	l = insere_fim(l, 7);
+	l = insere_fim(l, 11);
+	l = insere_fim(l, 2);
 
 	// antes de remover
 	imprime(l);

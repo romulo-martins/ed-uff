@@ -52,7 +52,12 @@ int size(Stack *st) {
 
 void free_stack (Stack *st) {
 	if(!st) exit(1);
-	free(st->head);
+	Node *node = st->head;
+	while(node) {
+		Node *temp = node;
+		node = node->next;
+		free(temp);
+	}
 	free(st);
 }
 
