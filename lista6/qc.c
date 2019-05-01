@@ -29,6 +29,8 @@ int main(int argc, char const *argv[]) {
 	printf("Fila pares: \n");
 	imprime_fila(f_pares);
 
+	libera_fila(f);
+	libera_fila(f_pares);
 
 	return 0;
 }
@@ -50,6 +52,8 @@ TFila* sep_fila (TFila *f) {
 		int valor = retira(f_impares); 
 		insere(f, valor);
 	}
+
+	libera_fila(f_impares);
 
 	return f_pares;
 }

@@ -28,6 +28,9 @@ int main(int argc, char const *argv[]) {
 	printf("Fila invertida: \n");
 	imprime_fila(f_inv);
 
+	libera_fila(f);
+	libera_fila(f_inv);
+
 	return 0;
 }
 
@@ -54,6 +57,9 @@ TFila* inv_fila (TFila *f) {
 		int valor = retira(f_temp);
 		insere(f, valor);
 	}
+
+	libera_fila(f_temp);
+	libera_pilha(p_temp);
 
 	return f_inv; 
 }
