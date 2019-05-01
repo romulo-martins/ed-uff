@@ -21,17 +21,9 @@ int main(int argc, char const *argv[]) {
 	insere(f, 11);
 	insere(f, 13);
 
-	printf("===== Antes =====\n");
-	printf("Fila: \n");
-	imprime_fila(f);
-
-	printf("===== Depois =====\n");
 	TPilha *p = f2p(f);
 
-	printf("Fila: \n");
-	imprime_fila(f);
-	
-	printf("Pilha: \n");
+	imprime_fila(f);	
 	imprime_pilha(p);
 
 	libera_fila(f);
@@ -53,15 +45,13 @@ TPilha* f2p (TFila *f) {
 
 	// Retorna os dados para fila original.
 	while(!fila_vazia(f_t)) {
-		int valor = retira(f_t);
-		insere(f, valor);
+		insere(f, retira(f_t));
 	}
 
 	// Passa os dados para pilha na ordem correta.
 	TPilha *p = inicializa_pilha();
 	while(!pilha_vazia(p_t)) {
-		int valor = pop(p_t);
-		push(p, valor);
+		push(p, pop(p_t));
 	}
 
 	libera_fila(f_t);
