@@ -9,7 +9,7 @@ inteiros nas filas de entrada. Além disso, as filas de entrada devem permanecer
 função deve obedecer ao seguinte protótipo: TFila* Junta_Filas (TFila *f1, TFila *f2);
 */
 
-TFila* Junta_Filas (TFila *f1, TFila *f2);
+TFila* junta_filas (TFila *f1, TFila *f2);
 
 int main(int argc, char const *argv[]) {
 	TFila *f1 = inicializa_fila();
@@ -22,12 +22,10 @@ int main(int argc, char const *argv[]) {
 	insere(f2, 11);
 	insere(f2, 13);
 	
-	TFila *f = Junta_Filas(f1, f2);
+	TFila *f = junta_filas(f1, f2);
 
 	imprime_fila(f1);
-
 	imprime_fila(f2);
-
 	imprime_fila(f);
 
 	libera_fila(f1);
@@ -56,7 +54,7 @@ TFila* copia(TFila *f) {
 	return f_cp;
 }
 
-TFila* Junta_Filas (TFila *f1, TFila *f2) {
+TFila* junta_filas (TFila *f1, TFila *f2) {
 	TFila *f1_temp = copia(f1);
 	TFila *f2_temp = copia(f2);
 

@@ -23,10 +23,7 @@ int main(int argc, char const *argv[]) {
 
 	TFila *f_pares = sep_fila(f);
 	
-	printf("Fila impares: \n");
 	imprime_fila(f);
-
-	printf("Fila pares: \n");
 	imprime_fila(f_pares);
 
 	libera_fila(f);
@@ -35,13 +32,17 @@ int main(int argc, char const *argv[]) {
 	return 0;
 }
 
+int eh_par(int n) {
+	return valor % 2 == 0;
+}
+
 TFila* sep_fila (TFila *f) {
 	TFila *f_impares = inicializa_fila();
 	TFila *f_pares = inicializa_fila();
 
 	while(!fila_vazia(f)) {
 		int valor = retira(f);
-		if (valor % 2 == 0) {
+		if (eh_par(valor)) {
 			insere(f_pares, valor);
 		} else {
 			insere(f_impares, valor);

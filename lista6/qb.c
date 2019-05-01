@@ -22,10 +22,7 @@ int main(int argc, char const *argv[]) {
 
 	TFila *f_inv = inv_fila(f);
 	
-	printf("Fila: \n");
 	imprime_fila(f);
-
-	printf("Fila invertida: \n");
 	imprime_fila(f_inv);
 
 	libera_fila(f);
