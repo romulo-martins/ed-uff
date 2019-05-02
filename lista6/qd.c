@@ -36,7 +36,7 @@ int main(int argc, char const *argv[]) {
 }
 
 // Retorna uma cópia da fila passada por parametro.
-TFila* copia(TFila *f) {
+TFila* copia_fila(TFila *f) {
 	TFila *f_temp = inicializa_fila();
 	while(!fila_vazia(f)) {
 		insere(f_temp, retira(f));
@@ -55,8 +55,8 @@ TFila* copia(TFila *f) {
 }
 
 TFila* junta_filas (TFila *f1, TFila *f2) {
-	TFila *f1_temp = copia(f1);
-	TFila *f2_temp = copia(f2);
+	TFila *f1_temp = copia_fila(f1);
+	TFila *f2_temp = copia_fila(f2);
 
 	TFila *f = inicializa_fila();
 
