@@ -1,12 +1,8 @@
 #ifndef LIST_H
 #define LIST_H
 
-typedef struct list {
-	int info;
-	struct list* next;
-} List;
-
 // Interface
+typedef struct list List;
 List* new_list();
 List* insert_init(List* l, int info);
 List* insert_end(List* l, int info);

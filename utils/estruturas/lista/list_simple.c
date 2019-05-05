@@ -2,6 +2,15 @@
 #include <stdlib.h>
 #include "list.h"
 
+// ============================
+// Lista simplesmente ecadeada
+// ============================
+
+typedef struct list {
+	int info;
+	struct list* next;
+} List;
+
 // Inicializa uma nova lista.
 List* new_list() {
 	return NULL;
