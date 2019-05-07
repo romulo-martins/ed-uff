@@ -12,7 +12,6 @@ typedef struct list {
 } List;
 
 
-// Inicializa uma nova lista.
 List* new_list() {
 	return NULL;
 }
