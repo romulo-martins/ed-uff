@@ -24,7 +24,7 @@ List* insert_init(List* l, int info) {
 	return node;
 }
 
-// Inserre o novo elemento no fim da lista.
+// Insere o novo elemento no fim da lista.
 List* insert_end(List* l, int info) {
 	if(!l) return insert_init(l, info);
 
