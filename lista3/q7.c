@@ -38,7 +38,8 @@ char* get_substr(char* str, int start, int end) {
 // Retorna a maior substring em comum. 
 // Baseado no problema "Longest Commom Subsequence" (LCS), 
 // mas com modificações para pegar apenas sequencias continuas.
-// Ref: https://algorithmsandme.com/longest-common-substring/
+// Ref1: https://algorithmsandme.com/longest-common-substring/
+// Ref2: https://algorithms.tutorialhorizon.com/dynamic-programming-longest-common-substring/
 char* long_com_substr(char *str_a, char *str_b) {
 	int a_len = strlen(str_a)+1;
 	int b_len = strlen(str_b)+1;
@@ -64,7 +65,7 @@ char* long_com_substr(char *str_a, char *str_b) {
 			}
 		}
 	}
-
+	// Como possuimos os idices de B também poderiamos pegar a partir dele.
 	char *substr = get_substr(str_a, i_max - max_len, i_max);
 
 	free_matrix(lcs, a_len);
@@ -73,14 +74,11 @@ char* long_com_substr(char *str_a, char *str_b) {
 }
 
 int main(int argc, char const *argv[]) {
-	// char *str_a = "ABCDEFGSE";
- 	// char *str_b = "EBCDEFGV";
-
 	// char *str_a = "ACCTGAACTCCCCCC";
 	// char* str_b = "ACCTAGGACCCCCC";
 
-	char *str_a = "HELLOWORLD";
-	char *str_b = "HIWORLDSHIT";
+	char *str_a = "tutorialhorizon";
+	char *str_b = "dynamictutorialProgramming";
 
 	char* substr = long_com_substr(str_a, str_b);
 	printf("%s\n", substr);
