@@ -50,6 +50,7 @@ List* insert_end(List* l, int info) {
 
 
 List* insert_sorted(List* l, int info) {
+	// TODO: 
 	return l;
 }
 
