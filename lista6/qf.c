@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lib/fila.h"
 #include "lib/pilha.h"
 

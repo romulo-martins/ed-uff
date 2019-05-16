@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 typedef struct fila TFila;
 TFila* inicializa_fila (void);
 TFila* insere (TFila *f, int elem);

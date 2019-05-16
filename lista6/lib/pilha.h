@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 typedef struct pilha TPilha;
 TPilha * inicializa_pilha (void);
 void push (TPilha *p, int elem);
