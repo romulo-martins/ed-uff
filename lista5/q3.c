@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "lib/tlse.h"
-
 /*
 Q3) Considerando a declaração da Q1, escreva uma função em C que, dada uma lista l
 qualquer, desloque uma vez os elementos de l, de acordo com n. Se n é ímpar, o
@@ -9,6 +5,8 @@ elemento que está na última posição passa a ser o primeiro quando a lista é
 Senão, o elemento que está na primeira posição passa a ser o último. O protótipo desta
 função é o seguinte: TLSE* desloca (TLSE* l, int n).
 */
+
+#include "lib/tlse.h"
 
 TLSE* desloca (TLSE* l, int n);
 

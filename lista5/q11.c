@@ -1,13 +1,11 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "lib/tlse.h"
-
 /*
 Q11) Considerando a declaração da Q1, escreva uma função em C que, dada uma lista l
 qualquer, ordene os elementos de l em uma outra lista de saída. Portanto, a lista de
 entrada não pode ser alterada. O protótipo da função desta função é o seguinte: TLSE *
 ordena (TLSE* l).
 */
+
+#include "lib/tlse.h"
 
 TLSE* ordena(TLSE* l);
 

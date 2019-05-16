@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 // Lista simplesmente encadeada.
 typedef struct lista {
 	int info;

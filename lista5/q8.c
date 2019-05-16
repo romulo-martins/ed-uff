@@ -1,8 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "lib/tlista.h"
-
 /*
 Q8) Considerando as seguintes declarações de uma lista encadeada:
 	typedef struct lista{
@@ -17,6 +12,9 @@ listas são iguais e 0, caso contrário. O protótipo desta função é o seguin
 int igual(TLista *l1, TLista *l2).
 OBS: protótipo de função que pode ser útil: int strcmp (char *s, char *t).
 */
+
+#include <string.h>
+#include "lib/tlista.h"
 
 int igual(TLista *l1, TLista *l2);
 

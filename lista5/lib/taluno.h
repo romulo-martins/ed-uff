@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 // Lista simplesmente encadeada de alunos.
 typedef struct aluno {
 	int mat;

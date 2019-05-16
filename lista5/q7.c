@@ -1,11 +1,9 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "lib/tlse.h"
-
 /*
 Q7) Refaça Q6, alterando a lista passada como parâmetro. O protótipo desta função é o
 seguinte: void* i_p ( TLSE *l).
 */
+
+#include "lib/tlse.h"
 
 void i_p(TLSE *l);
 

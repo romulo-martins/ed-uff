@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "lib/tlse.h"
-
 /*
 Q1) Considerando as seguintes declarações de lista encadeada:
 	typedef struct lista{
@@ -11,6 +7,8 @@ Q1) Considerando as seguintes declarações de lista encadeada:
 Escreva uma função em C que, dada uma lista l qualquer, inverta os elementos de l. O
 protótipo da função de inversão é o seguinte: void inverte (TLSE* l);
 */
+
+#include "lib/tlse.h"
 
 void inverte(TLSE *l);
 

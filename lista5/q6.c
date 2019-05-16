@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "lib/tlse.h"
-
 /*
 Q6) Considerando a definição de lista de Q1, escreva uma função em C que, dada uma
 lista l qualquer, retorne, numa lista de saída, os elementos ímpares e os elementos pares
@@ -10,6 +6,8 @@ função, a lista resultante terá todos os elementos da lista l (primeiro os í
 pares, na ordem em que eles aparecem em l), e a lista l continuará contendo os seus
 elementos. O protótipo da função é o seguinte: TLSE* i_p ( TLSE *l).
 */
+
+#include "lib/tlse.h"
 
 TLSE* i_p ( TLSE *l);
 

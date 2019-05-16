@@ -1,12 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "lib/tlse.h"
-
 /*
 Q2) Refaça a Q1, escrevendo uma função em C que, dada uma lista l qualquer, inverta os
 elementos de l em uma outra lista de saída. Portanto, a lista de entrada não pode ser
 alterada. O protótipo da função de inversão é o seguinte: TLSE* inverte (TLSE* l).
 */
+
+#include "lib/tlse.h"
 
 TLSE* inverte(TLSE* l);
 

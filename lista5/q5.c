@@ -1,12 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "lib/tlse.h"
-
 /*
 Q5) Considerando a definição de lista de Q1, escreva uma função em C que remova
 todas as ocorrências de um elemento numa lista. Seu protótipo O protótipo desta função é
 o seguinte: TLSE* rto (TLSE* l, int elem).
 */
+
+#include "lib/tlse.h"
 
 TLSE* rto (TLSE* l, int elem);
 

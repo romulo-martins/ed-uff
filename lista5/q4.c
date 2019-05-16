@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "lib/taluno.h"
-
 /*
 Q4) Considere a existência de um tipo que representa um aluno numa universidade
 hipotética:
@@ -13,6 +9,8 @@ hipotética:
 Escreva uma função que copie uma lista. A lista original deve permanecer inalterada. O
 protótipo da função é o seguinte: TAluno *copia (TAluno *l).
 */
+
+#include "lib/taluno.h"
 
 TAluno *copia (TAluno *a);
 

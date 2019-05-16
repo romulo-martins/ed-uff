@@ -1,8 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include "lib/tlista.h"
-
 /*
 Q10) Considerando a seguinte declaração de uma lista encadeada:
 	typedef struct lista{
@@ -16,6 +11,9 @@ inversão de l2. As listas l1 e l2 devem permanecer inalteradas. Esta função r
 as listas estão invertidas e 0, caso contrário. O protótipo desta função é o seguinte: 
 int Contrario (TL *l1, TL *l2).
 */
+
+#include <string.h>
+#include "lib/tlista.h"
 
 int Contrario (TLista *l1, TLista *l2);
 

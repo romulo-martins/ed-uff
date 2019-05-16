@@ -1,12 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "lib/tlse.h"
-
 /*
 Q9) Considerando a definição de lista de Q1, escreva uma função em C que, dadas duas
 listas, faça a concatenação das mesmas ao final de l1. O protótipo da função é o seguinte:
 TLSE* junta_listas (TLSE* l1, TLSE* l2).
 */
+
+#include "lib/tlse.h"
 
 TLSE* junta_listas (TLSE* l1, TLSE* l2);
 
