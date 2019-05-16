@@ -1,11 +1,11 @@
-#include "lib/fila.h"
-
 /*
 (c) uma função que, dada uma fila f, retorne uma nova fila contendo os elementos pares de f,
 e modifique a fila original (f) para que ela possua somente os elementos ímpares, respeitando
 a ordem de entrada em f. A função deve obedecer o seguinte protótipo: 
 TFila* sep_fila (TFila *f);
 */
+
+#include "lib/fila.h"
 
 TFila* sep_fila (TFila *f);
 

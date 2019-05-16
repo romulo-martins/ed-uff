@@ -1,11 +1,11 @@
-#include "lib/fila.h"
-#include "lib/pilha.h"
-
 /*
 (b) uma função que, dada uma fila f, retorne uma nova fila, com todos os elementos de f,
 porém invertida em relação a fila f. Não é possível alterar a ordem dos elementos da fila de
 entrada. A função deve obedecer o seguinte protótipo: TFila* inv_fila (TFila *f);
 */
+
+#include "lib/fila.h"
+#include "lib/pilha.h"
 
 TFila* inv_fila (TFila *f);
 

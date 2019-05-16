@@ -1,12 +1,12 @@
-#include "lib/pilha.h"
-#include "lib/fila.h"
-
 /*
 (a) uma função que, dada uma fila f, retorne uma pilha, contendo todos os elementos de f, e
 obedecendo a ordem de entrada dos inteiros na fila f, isto é, o primeiro inteiro que sair da fila f
 deve ser o primeiro inteiro a sair da pilha. Não é possível alterar a ordem dos elementos da fila
 de entrada. A função deve obedecer o seguinte protótipo: TPilha* f2p (TFila *f);
 */
+
+#include "lib/pilha.h"
+#include "lib/fila.h"
 
 TPilha* f2p (TFila *f);
 
