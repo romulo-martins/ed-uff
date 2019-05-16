@@ -3,13 +3,14 @@
 #include "tree.h"
 
 // =======================
-// Arvore de busca binária
+// Arvore binária de busca
 // =======================
 
 Tree* new_tree (void) {
 	return NULL;
 }
 
+// Insere um novo elemento na 
 Tree* tree_insert (Tree *t, int value) {
 	if(!t) {
 		t = (Tree*) malloc(sizeof(Tree));

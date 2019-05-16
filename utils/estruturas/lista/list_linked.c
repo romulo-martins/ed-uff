@@ -3,7 +3,7 @@
 #include "list.h"
 
 // ============================
-// Lista duplamente ecadeada
+// Lista Duplamente Ecadeada
 // ============================
 
 typedef struct list {
