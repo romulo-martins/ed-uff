@@ -19,6 +19,8 @@ int main(int argc, char const *argv[]) {
 	insere(f, 7);
 	insere(f, 8);
 
+	imprime_fila(f);
+
 	TFila *f_pares = sep_fila(f);
 	
 	imprime_fila(f);
@@ -30,17 +32,13 @@ int main(int argc, char const *argv[]) {
 	return 0;
 }
 
-int eh_par(int n) {
-	return valor % 2 == 0;
-}
-
 TFila* sep_fila (TFila *f) {
 	TFila *f_impares = inicializa_fila();
 	TFila *f_pares = inicializa_fila();
 
 	while(!fila_vazia(f)) {
 		int valor = retira(f);
-		if (eh_par(valor)) {
+		if (valor % 2 == 0) {
 			insere(f_pares, valor);
 		} else {
 			insere(f_impares, valor);
