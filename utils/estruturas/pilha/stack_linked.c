@@ -1,5 +1,9 @@
 #include "stack.h"
 
+// +===========================+
+// | Pilha por lista encadeada |
+// +===========================+
+
 typedef struct node {
 	int value;
 	struct node *next;

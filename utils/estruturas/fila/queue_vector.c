@@ -1,5 +1,9 @@
 #include "queue.h"
 
+// +================+
+// | Fila por vetor |
+// +================+
+
 typedef struct queue {
 	int first;
 	int last;

@@ -1,8 +1,8 @@
 #include "list.h"
 
-// ===============
-// Lista circular
-// ===============
+// +================+
+// | Lista circular |
+// +================+
 
 typedef struct list {
 	int info;

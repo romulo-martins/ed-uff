@@ -1,8 +1,8 @@
 #include "tree.h"
 
-// =======================
-// Arvore binária de busca
-// =======================
+// +==========================+
+// | Arvore binária de busca  |
+// +==========================+
 
 Tree* new_tree (void) {
 	return NULL;
@@ -52,9 +52,29 @@ void free_tree (Tree *t) {
 }
 
 void print_tree (Tree *t) {
+	in_order(t);
+}
+
+void pre_order_tree(Tree *t) {
+	if(t) {
+		printf(" %d ", t->value);
+		print_tree(t->left);
+		print_tree(t->right);
+	}
+}
+
+void in_order_tree(Tree *t) {
 	if(t) {
 		print_tree(t->left);
 		printf(" %d ", t->value);
 		print_tree(t->right);
+	}
+}
+
+void post_order_tree(Tree *t) {
+	if(t) {
+		print_tree(t->left);
+		print_tree(t->right);
+		printf(" %d ", t->value);
 	}
 }

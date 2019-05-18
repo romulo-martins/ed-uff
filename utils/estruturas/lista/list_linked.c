@@ -1,8 +1,8 @@
 #include "list.h"
 
-// ============================
-// Lista Duplamente Ecadeada
-// ============================
+// +===========================+
+// | Lista Duplamente Ecadeada |
+// +===========================+
 
 typedef struct list {
 	int info;

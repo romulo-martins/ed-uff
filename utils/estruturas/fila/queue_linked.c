@@ -1,5 +1,9 @@
 #include "queue.h"
 
+// +==========================+
+// | Fila por lista encadeada |
+// +==========================+
+
 typedef struct node {
 	int value;
 	struct node *next;

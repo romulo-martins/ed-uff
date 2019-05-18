@@ -1,5 +1,9 @@
 #include "stack.h"
 
+// +=================+
+// | Pilha por vetor |
+// +=================+
+
 typedef struct stack {
 	int pos;
 	int* vet;
