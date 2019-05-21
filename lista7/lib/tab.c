@@ -22,8 +22,11 @@ TAB* remover (TAB* a, int info) {
 }
 
 TAB* buscar (TAB* a, int info) {
-	// TODO: Implementar busca em profundidade ou largura.
-	return NULL;
+	if(!a) return NULL;
+	if(a->info == info) return a;
+	TAB *esq = buscar(a->esq, info);
+	if(esq) return esq;
+	return buscar(a->dir, info);
 }
 
 TAB* liberar (TAB* a) {
@@ -47,7 +50,7 @@ int pertence (TAB* a, int info) {
 
 // Por padrão vamos deixar In-Ordem.
 void imprimir (TAB* a) {
-	in_ordem(a);
+	pre_ordem(a);
 }
 
 void pre_ordem(TAB *a) {

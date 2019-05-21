@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#ifndef TAB_H
+#define TAB_H
+
 typedef struct ab {
 	int info;
 	struct ab *esq, *dir;
@@ -17,3 +20,5 @@ void imprimir (TAB* a);
 void pre_ordem(TAB *a);
 void in_ordem(TAB *a);
 void pos_ordem(TAB *a);
+
+#endif // TAB_H
