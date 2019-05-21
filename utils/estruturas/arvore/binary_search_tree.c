@@ -52,7 +52,7 @@ void free_tree (Tree *t) {
 }
 
 void print_tree (Tree *t) {
-	in_order(t);
+	pre_order_tree(t);
 }
 
 void pre_order_tree(Tree *t) {
