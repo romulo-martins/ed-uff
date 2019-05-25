@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#ifndef BSTREE_H
-#define BSTREE_H
+#ifndef _BSTREE_H
+#define _BSTREE_H
 
 typedef struct bstree {
 	int value;
@@ -11,14 +11,14 @@ typedef struct bstree {
 
 typedef struct bstree BSTree;
 BSTree* new_bstree (void);
-BSTree* bst_insert (BSTree *t, int value);
-BSTree* bst_remove (BSTree *t);
-BSTree* bst_search(BSTree *t, int value);
-int bst_size (BSTree *t);
-void bst_free (BSTree *t);
-void bst_print (BSTree *t);
-void bst_pre_order(BSTree *t);
-void bst_in_order(BSTree *t);
-void bst_post_order(BSTree *t);
+BSTree* bst_insert (BSTree *bst, int value);
+BSTree* bst_remove (BSTree *bst, int value);
+BSTree* bst_search(BSTree *bst, int value);
+int bst_size (BSTree *bst);
+void bst_free (BSTree *bst);
+void bst_print (BSTree *bst);
+void bst_pre_order(BSTree *bst);
+void bst_in_order(BSTree *bst);
+void bst_post_order(BSTree *bst);
 
 #endif // BSTREE_H
