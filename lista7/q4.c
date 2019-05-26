@@ -1,5 +1,5 @@
 /*
-(Q3) maior elemento da árvore: TAB* maior(TAB *a);
+(Q4) menor elemento da árvore: TAB* menor(TAB *a);
 */
 
 #include "lib/tab.h"
