@@ -30,7 +30,7 @@ int main(int argc, char const *argv[]) {
 	return 0;
 }
 
-TAB *max(TAB* a_esq, TAB* a_dir) {
+TAB* max(TAB* a_esq, TAB* a_dir) {
 	if(a_esq->info > a_dir->info) return a_esq;
 	return a_dir;
 }
