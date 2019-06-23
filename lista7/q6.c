@@ -8,29 +8,60 @@
 TAB* retira_pares (TAB* arv);
 
 int main(int argc, char const *argv[]) {
-	TAB *a = criar();
-	a = inserir(2, 
-			inserir(3, 
-				inserir(4, NULL, NULL), 
-				inserir(6, NULL, NULL)
-			), 
-			inserir(5, 
-				inserir(7, NULL, NULL), 
-				inserir(11, NULL, NULL)
+	TAB* a = inserir(61,
+		inserir(34, 
+			inserir(19, 
+				inserir(15, NULL, NULL), 
+				inserir(29, NULL, NULL)
+			),
+			inserir(47, 
+				inserir(42, NULL, NULL), 
+				inserir(53, NULL, NULL)
 			)
-		);
+		),
+		inserir(78, 
+			inserir(64, 
+				NULL, 
+				inserir(76, NULL, NULL)
+			),
+			inserir(87, 
+				inserir(84, NULL, NULL), 
+				NULL
+			)
+		)
+	);
 
-	imprimir(a);
+	pre_ordem(a);
 	printf("\n");
 
 	a = retira_pares(a);
 
-	imprimir(a);
+	pre_ordem(a);
 	printf("\n");
 
 	liberar(a);
 
 	return 0;
+}
+
+TAB* pega_ultimo_no(TAB* a) {
+	if(!a) return NULL;
+
+	TAB *p = a, *ant = NULL;
+	while(p->esq || p->dir) {
+		ant = p;
+		if(p->esq && !p->dir) p = p->esq;
+		if(!p->esq && p->dir) p = p->dir;
+		else {
+			if(tamanho(p->esq) > tamanho(p->dir)) {
+				p = p->esq;
+			} else {
+				p = p->dir;
+			}
+		}
+	}
+	ant->esq = ant->dir = NULL;
+	return p;
 }
 
 TAB* remove_raiz(TAB *arv) {
@@ -48,15 +79,17 @@ TAB* remove_raiz(TAB *arv) {
 		free(arv);
 		return no;
 	}
-	// TODO: fazer para quando o nó possui sub arvores a esquerda e direita.
+	TAB* no = pega_ultimo_no(arv); 
+	no->esq = arv->esq;
+	no->dir = arv->dir;
+	free(arv);
+	return no;
 }
 
 TAB* retira_pares (TAB* arv) {
 	if(!arv) return NULL;
-	if(arv->info % 2 == 0) {
-		return remove_raiz(arv);
-	}
 	arv->esq = retira_pares(arv->esq);
 	arv->dir = retira_pares(arv->dir);
+	if(arv->info % 2 == 0) return remove_raiz(arv);
 	return arv;
 }

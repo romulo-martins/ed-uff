@@ -22,7 +22,7 @@ int main(int argc, char const *argv[]) {
 	imprimir(a);
 	printf("\n");
 	
-	printf("%d nos internos.\n", ni(a));
+	printf("%d\n", ni(a));
 
 	liberar(a);
 

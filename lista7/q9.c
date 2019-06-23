@@ -8,14 +8,26 @@ int nf(TAB *a);
 
 int main(int argc, char const *argv[]) {
 	TAB *a = criar();
-	a = inserir(2, 
-		inserir(3, 
-			inserir(4, NULL, NULL), 
-			NULL
-		), 
-		inserir(5, 
-			inserir(7, NULL, NULL), 
-			inserir(11, NULL, NULL)
+	a = inserir(61,
+		inserir(34, 
+			inserir(19, 
+				inserir(15, NULL, NULL), 
+				inserir(29, NULL, NULL)
+			),
+			inserir(47, 
+				inserir(42, NULL, NULL), 
+				inserir(53, NULL, NULL)
+			)
+		),
+		inserir(78, 
+			inserir(64, 
+				NULL, 
+				inserir(76, NULL, NULL)
+			),
+			inserir(87, 
+				inserir(84, NULL, NULL), 
+				NULL
+			)
 		)
 	);
 
