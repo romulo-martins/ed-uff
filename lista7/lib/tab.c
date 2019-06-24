@@ -53,6 +53,8 @@ int tamanho(TAB* a) {
 	return 1 + tamanho(a->esq) + tamanho(a->dir);
 }
 
+// A comunidade C de desenvolvimento, costuma utilizar "_" na frente de funções "privadas", 
+// ou seja, as que não estão nos headers (.h).
 void _imprime(TAB *a, int andar){
   if(a){
     _imprime(a->esq, andar + 1);
