@@ -32,7 +32,6 @@ void run_test(int fact_idx, int expect) {
 
 int teste1(TAB *a) {
 	if(!a) return 0;
-	if(a->esq && !a->dir) return 0;
 	if(!a->esq && a->dir) return 0;
 	if(!a->esq && !a->dir) return 1;
 	return teste1(a->esq) && teste1(a->dir);

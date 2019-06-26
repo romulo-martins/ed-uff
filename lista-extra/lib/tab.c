@@ -48,10 +48,37 @@ int pertence (TAB* a, int info) {
 	return pertence(a->esq, info) || pertence(a->dir, info);
 }
 
-// Por padrão vamos deixar In-Ordem.
+int tamanho(TAB* a) {
+	if(!a) return 0;
+	return 1 + tamanho(a->esq) + tamanho(a->dir);
+}
+
+// A comunidade C de desenvolvimento, costuma utilizar "_" na frente de funções "privadas", 
+// ou seja, as que não estão nos headers (.h).
+void _imprime(TAB *a, int andar){
+  if(a){
+    _imprime(a->esq, andar + 1);
+    for(int i=0; i <= andar; i++) printf("   ");
+    printf("%d\n", a->info);
+    _imprime(a->dir, andar + 1);
+  }
+}
+
 void imprimir (TAB* a) {
-	pre_ordem(a);
-	printf("\n");
+	_imprime(a, 0);
+}
+
+void _imprime_cores(TAB *a, int andar){
+  if(a){
+    _imprime_cores(a->esq, andar + 1);
+    for(int i=0; i <= andar; i++) printf("    ");
+    printf("%d (%d)\n", a->info, a->cor);
+    _imprime_cores(a->dir, andar + 1);
+  }
+}
+
+void imprimir_cores (TAB* a) {
+	_imprime_cores(a, 0);
 }
 
 void pre_ordem(TAB *a) {

@@ -35,12 +35,26 @@ int main(int argc, char const *argv[]) {
 	if(sucessor(a, 5) == 7)   printf("OK\n"); else printf("FALSO\n");
 	if(sucessor(a, 10) == 11) printf("OK\n"); else printf("FALSO\n");
 	if(sucessor(a, 8) == 9)   printf("OK\n"); else printf("FALSO\n");
+	if(sucessor(a, 11) == 11)   printf("OK\n"); else printf("FALSO\n");
+	if(sucessor(a, 12) == 12)   printf("OK\n"); else printf("FALSO\n");
 	
 	liberar(a);
+
 	return 0;
 }
 
-// Verifica qual valor é o maior de x mais proximo de x, ou seja, seu sucessor.
+int max(int a, int b) {
+	if(a > b) return a; else return b;
+}
+
+int maior(TAB *a) {
+	if(!a) return -1;
+	int max_esq = maior(a->esq);
+	int max_dir = maior(a->dir);
+	return max(a->info, max(max_esq, max_dir));
+}
+
+// Verifica qual é o valor mais proximo de x, e que seja maior que x.
 int mais_prox(int x, int a, int b) {
 	if(a > x && b <= x) return a;
 	if(a <= x && b > x) return b;
@@ -48,9 +62,14 @@ int mais_prox(int x, int a, int b) {
 	return b;
 }
 
-int sucessor(TAB *a, int x) {
-	if(!a) return 0;
-	int se = sucessor(a->esq, x);
-	int sd = sucessor(a->dir, x);
+int _sucessor(TAB *a, int x) {
+	if(!a) return -1;
+	int se = _sucessor(a->esq, x);
+	int sd = _sucessor(a->dir, x);
 	return mais_prox(x, a->info, mais_prox(x, se, sd));
+}
+
+int sucessor(TAB *a, int x) {
+	if(x >= maior(a)) return x;
+	return _sucessor(a, x);
 }
