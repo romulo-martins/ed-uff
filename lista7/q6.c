@@ -44,23 +44,28 @@ int main(int argc, char const *argv[]) {
 	return 0;
 }
 
+
+/* 
+A ideia aqui é tentar pegar o ultimo nó do ramo que possui a maior quantidade de nós, 
+assim a arvore não fica muito desbalanceada.
+*/
 TAB* pega_ultimo_no(TAB* a) {
 	if(!a) return NULL;
+	int esq = 0;
 
 	TAB *p = a, *ant = NULL;
 	while(p->esq || p->dir) {
 		ant = p;
-		if(p->esq && !p->dir) p = p->esq;
-		if(!p->esq && p->dir) p = p->dir;
-		else {
-			if(tamanho(p->esq) > tamanho(p->dir)) {
-				p = p->esq;
-			} else {
-				p = p->dir;
-			}
+		if(tamanho(p->esq) > tamanho(p->dir)) {
+			p = p->esq;
+			esq = 1;
+		} else {
+			p = p->dir;
+			esq = 0;
 		}
 	}
-	ant->esq = ant->dir = NULL;
+	if(esq) ant->esq = NULL;	
+	else ant->dir = NULL;
 	return p;
 }
 
