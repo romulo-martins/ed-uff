@@ -1,8 +1,8 @@
 #ifndef TAB_FACT_H
 #define TAB_FACT_H
 
-#include "tab.h"
+#include "../lib/tab.h"
 
-TAB* ab_factory(int n);
+TAB* tab_factory(int n);
 
 #endif // TAB_FACT_H

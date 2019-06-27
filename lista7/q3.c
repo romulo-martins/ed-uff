@@ -30,15 +30,17 @@ int main(int argc, char const *argv[]) {
 	return 0;
 }
 
-TAB* max(TAB* a_esq, TAB* a_dir) {
-	if(a_esq->info > a_dir->info) return a_esq;
-	return a_dir;
+TAB* max(TAB* esq, TAB* dir) {
+	if(!esq && !dir) return NULL;
+	if(esq && !dir) return esq;
+	if(!esq && dir) return dir;
+	if(esq->info > dir->info) return esq;
+	return dir;
 }
 
 TAB* maior(TAB *a) {
 	if(!a) return a;
 	TAB *max_esq = maior(a->esq);
 	TAB *max_dir = maior(a->dir);
-	if(!max_esq && !max_dir) return a;
-	return max(max(a, max_esq), max(a, max_dir));
+	return max(a, max(max_esq, max_dir));
 }

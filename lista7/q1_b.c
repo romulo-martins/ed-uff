@@ -1,5 +1,5 @@
 /*
-(Q1) cópia de uma árvore: TAB* copia (TAB *a);
+(Q1.b) cópia de uma árvore: TABB* copia (TABB *a);
 */
 
 #include "lib/tabb.h"

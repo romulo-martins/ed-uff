@@ -4,7 +4,7 @@ ou 2 filhos). ​ int teste1(TAB *a);
 */
 
 #include "lib/tab.h"
-#include "lib/tab_factory.h"
+#include "fac/tab_factory.h"
 
 int teste1(TAB *a);
 void run_test(int fact_idx, int expect);
@@ -20,7 +20,7 @@ int main(int argc, char const *argv[]) {
 
 // Recebe o indice da arvore a ser criada pela factory, e o resultado esperado(1 true ou 0 false).
 void run_test(int fact_idx, int expect) {
-	TAB *a = ab_factory(fact_idx);
+	TAB *a = tab_factory(fact_idx);
 	if(!a) {
 		printf("ERROR: factory não encontrada\n"); 
 		return;	

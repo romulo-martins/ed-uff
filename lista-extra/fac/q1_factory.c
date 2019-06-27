@@ -68,7 +68,7 @@ TAB* ab_factory5() {
 	);
 }
 
-TAB* ab_factory(int n) {
+TAB* tab_factory(int n) {
 	if(n < 1 || n > MAX_FACT) return NULL;
 	TAB* factories[] = {
 		ab_factory1(),
